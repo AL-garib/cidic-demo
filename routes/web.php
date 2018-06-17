@@ -15,6 +15,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/blockedUsers', 'Admin\DashboardController@block')->name('blocked_users');
     Route::get('user/apporve/{id}', 'Admin\PosterController@apporve')->name('poster.approve');
     Route::get('/', 'Admin\DashboardController@index')->name('dashboard');
+    Route::get('user.user/all', 'UserController@get_datatable')->name('all_users');
     Route::resource('user', 'Admin\UserController');
     Route::resource('poster', 'Admin\PosterController');
     Route::resource('city', 'Admin\CityController');

@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A Fantastic Applaction!">
-<meta name="keywords" content="Admin Panel For SoldItOut">
+<meta name="keywords" content="Admin Panel For CIDIC">
 <title>Cidic | Admin Panel</title>
-<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+<link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
 <link href="{{ asset('css/entypo.css') }}" rel="stylesheet">
 <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/plugins/css3-animate-it-plugin/animations.css') }}" rel="stylesheet">
