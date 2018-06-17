@@ -5,17 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>CIDIC</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Cairo:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+                color: #DDD;
+                font-family: 'Cairo', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -50,7 +51,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #DDD;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -71,23 +72,31 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}">
+                            <i class="fa fa-signing" aria-hidden="true"></i>
+                            تسجيل الدخول
+                        </a>
+                        <a href="{{ route('register') }}">
+                            تسجيل
+                        </a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md" style="">
+                    <img class="img-fluid" src="/images/logocidic.png" alt="CIDIC Logo" height="150">
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                  <h3>مرحبا بك في موقع سدك</h3>
+                        <a href="{{ route('login') }}">
+                            <i class="fa fa-signing" aria-hidden="true"></i>
+                            تسجيل الدخول
+                        </a>
+                        <a href="{{ route('register') }}">
+                            تسجيل
+                        </a>
                 </div>
             </div>
         </div>
