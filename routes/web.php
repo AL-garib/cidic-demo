@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::domain('dashboard.soldItOut.test')->group(function () {
+Route::prefix('admin')->group(function () {
     //Route::prefix('/manage')->group(function() {
     Route::get('/blockedUsers', 'Admin\DashboardController@block')->name('blocked_users');
     Route::get('user/apporve/{id}', 'Admin\PosterController@apporve')->name('poster.approve');

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A Fantastic Applaction!">
 <meta name="keywords" content="Admin Panel For SoldItOut">
-<title>Mouldifi | Ecommerce</title>
+<title>Cidic | Admin Panel</title>
 <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
 <link href="{{ asset('css/entypo.css') }}" rel="stylesheet">
 <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">

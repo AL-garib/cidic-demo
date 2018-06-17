@@ -10,12 +10,33 @@
 		
 		<!-- Main navigation -->
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
-			<li class="has-sub active ">
-				<a href="index.html">
+			<li class="has-sub">
+				<a href="/admin">
 					<i class="icon-gauge"></i><span class="title">@lang('dashboard.dashboard')</span>
 				</a>
 			</li>
-			<li class="has-sub">
+			<li class="has-sub active">
+				<a href="">
+					<i class="icon-gauge"></i><span class="title">
+						الموظفيين
+					</span>
+				</a>
+				<ul class="nav">
+					<li><a href="{{ route('user.index') }}">
+						<i class="icon-popup"></i>
+						<span class="title">
+							ادارة الموظفيين
+						</span>
+					</a></li>
+					<li><a href="{{ route('user.create') }}">
+						<i class=" icon-pencil"></i>
+						<span class="title">
+							اضافة موظف
+						</span>
+					</a></li>
+				</ul>
+			</li>
+			{{-- <li class="has-sub">
 				<a href="#">
 					<i class="icon-window"></i>
 					<span class="title">
@@ -82,7 +103,7 @@
 						<span class="title">@lang('sidebar.comment_add')</span>
 					</a></li>
 				</ul>
-			</li>
+			</li> --}}
 			<li class="has-sub"><a href="{{ route('blocked_users') }}"><i class=" icon-minus-circled"></i><span class="title">@lang('sidebar.blocked_user')</span></a>
 			</li>
 		</ul>

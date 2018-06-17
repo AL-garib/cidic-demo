@@ -10,7 +10,7 @@
 			<div class="col-lg-3 col-md-6 animatedParent animateOnce z-index-50">
 				<div class="panel minimal panel-default animated fadeInUp">
 					<div class="panel-heading clearfix"> 
-						<div class="panel-title">@lang('dashboard.poster')</div> 
+						<div class="panel-title">الموظفيين</div> 
 						<ul class="panel-tool-options"> 
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog"></i></a>
@@ -24,7 +24,7 @@
 					<div class="panel-body">
 						<div class="stack-order"> 
 							<h1 class="no-margins">{{ number_format($posterLatest) }}</h1>
-							<small>@lang('dashboard.poster_since')</small>
+							<small>الموظفيين المضافة منذ</small>
 						</div>
 						<div class="bar-chart-icon"></div>
 					</div> 
@@ -33,7 +33,7 @@
 			<div class="col-lg-3 col-md-6 animatedParent animateOnce z-index-49">
 				<div class="panel minimal panel-default animated fadeInUp">
 					<div class="panel-heading clearfix"> 
-						<div class="panel-title">@lang('dashboard.user')</div> 
+						<div class="panel-title"> تم قبولهم </div> 
 						<ul class="panel-tool-options"> 
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog"></i></a>
@@ -47,7 +47,7 @@
 					<div class="panel-body"> 
 						<div class="stack-order">
 							<h1 class="no-margins">{{ number_format($userLatest) }}</h1>
-							<small>@lang('dashboard.user_since').</small>
+							<small>الموظفيين الذين تم قبولهم .</small>
 						</div>
 						<div class="bar-chart-icon"></div>
 					</div> 
@@ -56,7 +56,7 @@
 			<div class="col-lg-3 col-md-6 animatedParent animateOnce z-index-48">
 				<div class="panel minimal panel-default animated fadeInUp">
 					<div class="panel-heading clearfix"> 
-						<div class="panel-title">@lang('dashboard.blocked_user').</div> 
+						<div class="panel-title"> مرشحيين للمقابلة </div> 
 						<ul class="panel-tool-options"> 
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog"></i></a>
@@ -70,7 +70,7 @@
 					<div class="panel-body"> 
 						<div class="stack-order">
 							<h1 class="no-margins">{{ number_format($userCountBlocked) }}</h1>
-							<small>@lang('dashboard.blocked_user_since').</small>
+							<small>الموظفيين الذين تم ترشيحهم.</small>
 						</div>
 						<div class="bar-chart-icon"></div>
 					</div> 
@@ -79,7 +79,9 @@
 			<div class="col-lg-3 col-md-6 animatedParent animateOnce z-index-47">
 				<div class="panel minimal panel-default animated fadeInUp">
 					<div class="panel-heading clearfix"> 
-						<div class="panel-title">@lang('dashboard.salerManth')</div> 
+						<div class="panel-title">
+							محظوريين
+						</div> 
 						<ul class="panel-tool-options"> 
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog"></i></a>
@@ -93,7 +95,7 @@
 					<div class="panel-body"> 
 						<div class="stack-order">
 							<h1 class="no-margins">759</h1>
-							<small>@lang('dashboard.salerManth_since').</small>
+							<small>الموظفيين الذين تم حظرهم.</small>
 						</div>
 						<div class="bar-chart-icon"></div>
 					</div> 
@@ -105,7 +107,7 @@
 				<div class="panel-group animated fadeInUp">
 					<div class="panel panel-invert">
 						<div class="panel-heading no-border clearfix"> 
-							<h2 class="panel-title">{{ __('dashboard.revenue') }}</h2>
+							<h2 class="panel-title"> احصائيات </h2>
 							<ul class="panel-tool-options">
 								<li><a href="#" id="Revenuelines"><i class="icon-chart-line icon-2x"></i></a></li>
 								<li class="dropdown">
@@ -126,7 +128,7 @@
 					<div class="panel">
 						<div class="panel-body">
 							<div class="panel-update-content">
-								<div class="row-revenue clearfix">
+								{{-- <div class="row-revenue clearfix">
 									<div class="col-xs-6">
 										<h5>@lang('dashboard.revenue_gross')</h5>
 										<h1>9,362.74</h1>
@@ -135,7 +137,7 @@
 										<h5>@lang('dashboard.revenue_net')</h5>
 										<h1>6,734.89</h1>
 									</div>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 					</div>
@@ -144,7 +146,7 @@
 			<div class="col-lg-6 animatedParent animateOnce z-index-45">
 				<div class="panel panel-default animated fadeInUp">
 					<div class="panel-body">
-						<h2>{{ __('dashboard.latestPosters') }}</h2>
+						<h2>اخر الموظفيين المسجليين</h2>
 						<ul class="feed-item-list removeable-list">
 							@foreach($posters as $poster)
 							<li>
@@ -216,7 +218,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-12 animatedParent animateOnce z-index-42">
+					{{-- <div class="col-lg-12 animatedParent animateOnce z-index-42">
 						<div class="panel panel-default animated fadeInUp">
 							<div class="panel-heading no-border clearfix"> 
 								<h2 class="panel-title">{{ __('dashboard.user') }}</h2>
@@ -252,13 +254,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>	
 		<!-- Footer -->
 		<footer class="animatedParent animateOnce z-index-10"> 
-			<div class="footer-main animated fadeInUp slow">&copy; 2016 <strong>Mouldifi</strong> Admin Theme by <a target="_blank" href="#/">G-axon</a> </div>
+			<div class="footer-main animated fadeInUp slow">&copy; 2016 <strong>~</strong> by <a target="_blank" href="https://instagram.com/gw8">Zymawy</a> </div>
 		</footer>	
 		<!-- /footer -->
 		

@@ -3,17 +3,31 @@
 	  
 		<!-- User info -->
         <ul class="user-info pull-left">          
-          <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg">John Henderson <span class="caret"></span></a>
+          <li class="profile-info dropdown">
+			  <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg">
+				{{ Auth::user()->name ?? "John Henderson" }} <span class="caret"></span>
+			</a>
 		  
 			<!-- User action menu -->
             <ul class="dropdown-menu">
               
-              <li><a href="#/"><i class="icon-user"></i>My profile</a></li>
-              <li><a href="#/"><i class="icon-mail"></i>Messages</a></li>
-              <li><a href="#"><i class="icon-clipboard"></i>Tasks</a></li>
+              <li><a href="#/"><i class="icon-user"></i>البروفايل</a></li>
+              {{-- <li><a href="#/"><i class="icon-mail"></i>Messages</a></li> --}}
+              {{-- <li><a href="#"><i class="icon-clipboard"></i>Tasks</a></li> --}}
 			  <li class="divider"></li>
-			  <li><a href="#"><i class="icon-cog"></i>Account settings</a></li>
-			  <li><a href="#"><i class="icon-logout"></i>Logout</a></li>
+			  <li><a href="#"><i class="icon-cog"></i>اعدادت الحساب</a></li>
+			  <li>
+			<a class="dropdown-item" href="{{ route('logout') }}"
+				onclick="event.preventDefault();
+								document.getElementById('logout-form').submit();">
+								<i class="icon-logout"></i>
+				{{ __('تسجيل الخروج') }}
+			</a>
+
+			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+				@csrf
+			</form>
+			</li>
             </ul>
 			<!-- /user action menu -->
 			
@@ -23,7 +37,7 @@
 		
       </div>
 	  
-      <div class="col-sm-6 col-xs-5">
+      {{-- <div class="col-sm-6 col-xs-5">
 	  	<div class="pull-right">
 			<!-- User alerts -->
 			<ul class="user-info pull-left">
@@ -120,5 +134,5 @@
 			<!-- /user alerts -->
 			
 		</div>
-      </div>
+      </div> --}}
     </div>
