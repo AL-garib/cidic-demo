@@ -20,4 +20,6 @@ return [
     'poster' => 'الاعلانات',
     'poster_manage' => 'ادارة الاعلانات',
     'poster_add' => 'اضافة اعلان',
+    'poster_onlyTreached' => 'ادارة الاعلانات المنتهية و الموقوفة',
+    'logViewer' => 'سجل الاخطار للنظام',
 ];
