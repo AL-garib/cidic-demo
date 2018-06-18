@@ -57,7 +57,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // });
 
 
-Route::resource('/banks', 'Profile\Bank_dateController');
+Route::resource('/bank', 'Profile\Bank_dateController');
 
 Route::resource('/personal', 'Profile\Person_dataController');
 

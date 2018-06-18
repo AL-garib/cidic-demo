@@ -55,7 +55,7 @@ class Bank_dateController extends Controller
     public function show($id)
     {
      $bank = Bank_data::Find($id);
-    return view('person.bank.show');
+    return view('person.bank.show')->with('bank',$bank);
     }
 
     /**

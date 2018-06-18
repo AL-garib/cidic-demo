@@ -57,7 +57,7 @@ class Communication_dataController extends Controller
     public function show($id)
     {
         $communication = Communication_data::find($id);
-        return view('person.communication.index');
+        return view('person.communication.show')->with('communication', $communication);
     }
 
     /**

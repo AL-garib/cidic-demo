@@ -41,6 +41,22 @@ class User extends Authenticatable
         return $this->hasMany('App\Comment', 'user_id');
     }
 
+
+    public function bank_data()
+    {
+        return $this->hasone('App\Bank_data', 'user_id');
+    }
+
+    public function personal_data()
+    {
+        return $this->hasone('App\Personal_datat', 'user_id');
+    }
+
+    public function communication_data()
+    {
+        return $this->hasone('App\Communication_data', 'user_id');
+    }
+
     
 
 }

@@ -14,8 +14,8 @@ class Person_dataController extends Controller
      */
     public function index()
     {
-        $personal = Personal_data::all();
-        return view('person.person_data.index')->with('personal', $personal);
+        // $personal = Personal_data::all();
+        // return view('person.person_data.index')->with('personal', $personal);
     }
 
     /**
@@ -61,7 +61,8 @@ class Person_dataController extends Controller
      */
     public function show($id)
     {
-        //
+        $person = Personal_data::Find($id);
+        return view('person.person_data.show')->with('person', $person);
     }
 
     /**

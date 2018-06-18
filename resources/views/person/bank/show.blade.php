@@ -22,14 +22,14 @@
               </tr>
             </thead>
             <tbody>
-         @foreach($banks as $bank)
+       
               <tr class="table-active">
                 <td>{{$bank->iban}}</td>
                 <td>{{$bank->name_account}}
                 <td>{{$bank->name_bank}} 
               </tr>
              
-         @endforeach
+     
             
            
               
