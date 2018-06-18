@@ -56,6 +56,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // });
 
+// Route::get('/personal/create', 'Profile\Person_dataController@create')->name('person.person_data.create');
+// Route::post('/personal/store', 'Profile\Person_dataController@store')->name('person.person_data.store');
 
 Route::resource('/bank', 'Profile\Bank_dateController');
 

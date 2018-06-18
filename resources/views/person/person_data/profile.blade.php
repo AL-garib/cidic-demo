@@ -16,7 +16,6 @@
 
                 <form class="needs-validation" method="POST" action="{{route('personal.store')}}" novalidate>
                   {{ csrf_field() }}
-
                           <div class="row">
                             <div class="col-md-6 mb-3">
                               <label for="firstName">الإسم</label>
@@ -49,9 +48,9 @@
                              
                                     <div class="col-md-6 mb-3">
                                       <label for="place_brith">مكان الميلاد</label>
-                                      <select class="custom-select d-block w-100" id="country" required>
+                                      <select class="custom-select d-block w-100"  name="place_brith" id="country" required>
                                         <option value="">Choose...</option>
-                                        <option value="place_brith">مكة</option>
+                                        <option value="مكة">مكة</option>
                                       </select>
                                       <div class="invalid-feedback">
                                         Please select a valid country.
@@ -75,9 +74,9 @@
                            
                             <div class="col-md-6 mb-3">
                               <label for="nationality">الجنسية</label>
-                              <select class="custom-select d-block w-100" id="nationality" required>
+                              <select class="custom-select d-block w-100" name="nationality" id="nationality" required>
                                 <option value="">Choose...</option>
-                                <option value="nationality">سعودي </option>
+                                <option value="سعودي ">سعودي </option>
                               </select>
                               <div class="invalid-feedback">
                                 Please select a valid country.
@@ -87,9 +86,9 @@
 
                             <div class="col-md-6 mb-3">
                               <label for="city">المدينة</label>
-                              <select class="custom-select d-block w-100" id="city" required>
+                              <select class="custom-select d-block w-100" name="city" id="city" required>
                                 <option value="">Choose...</option>
-                                <option value="city">جدة</option>
+                                <option value="جدة">جدة</option>
                               </select>
                               <div class="invalid-feedback">
                                 Please provide a valid state.

@@ -45,10 +45,10 @@ class Person_dataController extends Controller
         $Person->expiry_date_id= $request->expiry_date_id;
         $Person->nationality= $request->nationality;
         $Person->city= $request->city;
-        $Person->image_person= $request->image_person;
-        $Person->image_id= $request->image_id;
+        // $Person->image_person= $request->image_person;
+        // $Person->image_id= $request->image_id;
         $Person->save();
-        return redirect()->action('Profile\Profile\Person_dataController@index');
+        return redirect()->action('Profile\Profile\Person_dataController@show');
 
 
     }

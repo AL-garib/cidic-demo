@@ -14,9 +14,8 @@
               <div class="col-md-8 order-md-1">
 
 
-                      <form class="needs-validation"   method="POST"  action="{{ route('banks.store') }}"  novalidate>
+                      <form class="needs-validation"   method="POST"  action="{{ route('bank.store') }}"  novalidate>
                         {{ csrf_field() }}
-
                         <div class="row">
                           <div class="col-md-6 mb-3">
                             <label for="iban">الأيبان</label>
