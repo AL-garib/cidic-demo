@@ -15,6 +15,7 @@ class CreateBankDatasTable extends Migration
     {
         Schema::create('bank_datas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->integer('iban');
             $table->string('name_account');
             $table->string('name_bank');

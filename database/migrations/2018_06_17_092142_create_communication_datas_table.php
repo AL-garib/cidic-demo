@@ -15,6 +15,7 @@ class CreateCommunicationDatasTable extends Migration
     {
         Schema::create('communication_datas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->integer('phone');
             $table->string('email');
             $table->string('address');

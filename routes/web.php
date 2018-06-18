@@ -37,14 +37,28 @@ Route::get('/profile', function () {
     return view('person.person_data.profile');
 });
 
-Route::get('/profile', function () {
-    return view('person.bank.bank_data');
-});
+// Route::get('/bank', function () {
+//     return view('person.bank.bank_data');
+// });
 
-Route::get('/profile', function () {
-    return view('person.communication.communication_date');
-});
+// Route::get('/communication', function () {
+//     return view('person.communication.communication_date');
+// });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
- 
+
+// Route::prefix('profile')->group(function () {
+
+
+// Route::resource('bank', 'Profile\Bank_dataController');
+
+
+// });
+
+
+Route::resource('/banks', 'Profile\Bank_dateController');
+
+Route::resource('/personal', 'Profile\Person_dataController');
+
+Route::resource('/Communication', 'Profile\Communication_dataController');

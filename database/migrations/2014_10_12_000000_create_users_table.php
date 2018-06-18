@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('number_phone', 191)->unique();
+            $table->integer('number_id');
             $table->string('brief', 255)->nullable();
             $table->string('thumbnail', 255)->nullable();
             $table->integer('awereded')->unsigned();
@@ -26,7 +27,6 @@ class CreateUsersTable extends Migration
             $table->boolean('is_blocked')->default(false);
             $table->boolean('is_approved')->default(true);
             $table->boolean('is_admin')->default(false);
-            $table->integer('number_id');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

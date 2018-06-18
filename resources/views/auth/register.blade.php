@@ -72,10 +72,10 @@
 
 
                         <div class="form-group row">
-                            <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('رقم الهوية') }}</label>
+                            <label for="number_id" class="col-md-4 col-form-label text-md-right">{{ __('رقم الهوية') }}</label>
 
                             <div class="col-md-6">
-                                <input id="text" type="text" class="form-control{{ $errors->has('number_id') ? ' is-invalid' : '' }}" name="number_id" value="{{ old('number_id') }}" required>
+                                <input id="number_id" type="text" class="form-control{{ $errors->has('number_id') ? ' is-invalid' : '' }}" name="number_id" value="{{ old('number_id') }}" required>
 
                                 @if ($errors->has('number_id'))
                                     <span class="invalid-feedback">

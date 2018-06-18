@@ -14,19 +14,21 @@
                 <div class="col-md-8 order-md-1">
 
 
-                        <form class="needs-validation" novalidate>
+                <form class="needs-validation" method="POST" action="{{route('personal.store')}}" novalidate>
+                  {{ csrf_field() }}
+
                           <div class="row">
                             <div class="col-md-6 mb-3">
                               <label for="firstName">الإسم</label>
-                              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                              <input type="text" class="form-control" id="firstName" name="name" placeholder="" value="" required>
                               <div class="invalid-feedback">
                                 Valid first name is required.
                               </div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                              <label for="lastName">رقم الهوية</label>
-                              <input type="text" class="form-control" id="س" placeholder="" value="" required>
+                              <label for="identity">رقم الهوية</label>
+                              <input type="text" class="form-control" id="identity" name="identity" placeholder="" value="" required>
                               <div class="invalid-feedback">
                                 Valid last name is required.
                               </div>
@@ -36,8 +38,8 @@
 
                           <div class="row">
                           <div class="col-md-6 mb-3">
-                                <label for="place_date">تاريخ الميلاد</label>
-                                <input type="date" class="form-control" id="place_date" placeholder="" required>
+                                <label for="date_brith">تاريخ الميلاد</label>
+                                <input type="date" class="form-control" id="date_brith" name="date_brith" placeholder="" required>
                                 <div class="invalid-feedback">
                                   Please enter your shipping address.
                                 </div>
@@ -46,10 +48,10 @@
 
                              
                                     <div class="col-md-6 mb-3">
-                                      <label for="country">مكان الميلاد</label>
+                                      <label for="place_brith">مكان الميلاد</label>
                                       <select class="custom-select d-block w-100" id="country" required>
                                         <option value="">Choose...</option>
-                                        <option>United States</option>
+                                        <option value="place_brith">مكة</option>
                                       </select>
                                       <div class="invalid-feedback">
                                         Please select a valid country.
@@ -60,8 +62,8 @@
 
                           <div class="row">
                               <div class="col-md-6 mb-2">
-                                    <label for="place_date">تاريخ إنهاء الهوية</label>
-                                    <input type="date" class="form-control" id="place_date" placeholder="" required>
+                                    <label for="expiry_date_id">تاريخ إنهاء الهوية</label>
+                                    <input type="date" class="form-control" id="expiry_date_id" name="expiry_date_id" placeholder="" required>
                                     <div class="invalid-feedback">
                                       Please enter your shipping address.
                                     </div>
@@ -72,10 +74,10 @@
               
                            
                             <div class="col-md-6 mb-3">
-                              <label for="country">الجنسية</label>
-                              <select class="custom-select d-block w-100" id="country" required>
+                              <label for="nationality">الجنسية</label>
+                              <select class="custom-select d-block w-100" id="nationality" required>
                                 <option value="">Choose...</option>
-                                <option>United States</option>
+                                <option value="nationality">سعودي </option>
                               </select>
                               <div class="invalid-feedback">
                                 Please select a valid country.
@@ -84,10 +86,10 @@
                           
 
                             <div class="col-md-6 mb-3">
-                              <label for="state">المدينة</label>
-                              <select class="custom-select d-block w-100" id="state" required>
+                              <label for="city">المدينة</label>
+                              <select class="custom-select d-block w-100" id="city" required>
                                 <option value="">Choose...</option>
-                                <option>California</option>
+                                <option value="city">جدة</option>
                               </select>
                               <div class="invalid-feedback">
                                 Please provide a valid state.

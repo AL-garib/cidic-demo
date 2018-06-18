@@ -14,11 +14,13 @@
               <div class="col-md-8 order-md-1">
 
 
-                      <form class="needs-validation" novalidate>
+              <form class="needs-validation"  method="POST" action="{{route('Communication.store')}}" novalidate>
+                {{ csrf_field() }}
+
                         <div class="row">
                           <div class="col-md-6 mb-3">
                             <label for="phone">رقم الجوال</label>
-                            <input type="phone" class="form-control" id="firstName" placeholder="" value="" required>
+                            <input type="phone" class="form-control" id="phone" name="phone" placeholder="" value="" required>
                             <div class="invalid-feedback">
                               Valid first name is required.
                             </div>
@@ -26,7 +28,7 @@
                           
                           <div class="col-md-6 mb-3">
                             <label for="email">البريد الإلكتروني</label>
-                            <input type="email" class="form-control" id="س" placeholder="" value="" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="" value="" required>
                             <div class="invalid-feedback">
                               Valid last name is required.
                             </div>
@@ -36,8 +38,8 @@
 
                         <div class="row">
                                 <div class="col-md-6 mb-3">
-                                        <label for="text">العنوان</label>
-                                        <input type="texts" class="form-control" id="س" placeholder="" value="" required>
+                                        <label for="address">العنوان</label>
+                                        <input type="texts" class="form-control" id="address" name="address" placeholder="" value="" required>
                                         <div class="invalid-feedback">
                                           Valid last name is required.
                                         </div>
@@ -48,8 +50,8 @@
 
                            
                                     <div class="col-md-6 mb-3">
-                                            <label for="email">رقم جوال شخص قريب</label>
-                                            <input type="email" class="form-control" id="س" placeholder="" value="" required>
+                                            <label for="phone_near_person">رقم جوال شخص قريب</label>
+                                            <input type="email" class="form-control" id="phone_near_person" name="phone_near_person" placeholder="" value="" required>
                                             <div class="invalid-feedback">
                                               Valid last name is required.
                                             </div>
