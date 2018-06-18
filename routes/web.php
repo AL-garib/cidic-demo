@@ -32,6 +32,19 @@ Route::get('/', function () {
 });
 
 
+
+Route::get('/profile', function () {
+    return view('person.person_data.profile');
+});
+
+Route::get('/profile', function () {
+    return view('person.bank.bank_data');
+});
+
+Route::get('/profile', function () {
+    return view('person.communication.communication_date');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+ 

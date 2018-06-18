@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_blocked')->default(false);
             $table->boolean('is_approved')->default(true);
             $table->boolean('is_admin')->default(false);
+            $table->integer('number_id');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
